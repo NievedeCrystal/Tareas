@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movimiento del Cubo</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <style>
+        body { text-align: center; font-family: Arial, sans-serif; }
+        canvas { border: 1px solid black; background-color: lightgray; }
+        .botones { margin: 20px; }
+        .grafica-container { display: flex; justify-content: center; gap: 20px; flex-wrap: wrap; }
+        canvas.grafica { width: 300px !important; height: 300px !important; }
+    </style>
+</head>
+<body>
+    <h1>Movimiento del Cubo</h1>
+
+    <!-- Área del cubo -->
+    <canvas id="canvas" width="600" height="300"></canvas>
+
+    <!-- Botones de control -->
+    <div class="botones">
+        <button onclick="seleccionarMovimiento(1)">MRU</button>
+        <button onclick="seleccionarMovimiento(2)">MRUV</button>
+        <button onclick="seleccionarMovimiento(3)">MRV</button>
+        <button onclick="mostrarEcuaciones()">Ver Ecuaciones</button>
+    </div>
+
+    <!-- Gráficas -->
+    <div class="grafica-container">
+        <canvas id="graficaPosicion" class="grafica"></canvas>
+        <canvas id="graficaVelocidad" class="grafica"></canvas>
+        <canvas id="graficaAceleracion" class="grafica"></canvas>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
